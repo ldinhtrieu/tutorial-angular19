@@ -1,0 +1,11 @@
+{
+  "IDX.aI.enableInlineCompletion": true,
+  "IDX.aI.enableCodebaseIndexing": true,
+  "files.enableTrash": true,
+  "explorer.excludeGitIgnore": false,
+  "files.watcherExclude": {
+    "**/.git/objects/**": false,
+    "**/.git/subtree-cache/**": false,
+    "**/.hg/store/**": false
+  }
+}
