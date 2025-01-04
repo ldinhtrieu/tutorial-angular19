@@ -8,19 +8,24 @@ import { ProductsService } from '../products.service';
   selector: 'app-product-list',
   imports: [ProductDetailComponent, SortPipe],
   templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css'
+  styleUrl: './product-list.component.css',
 })
 export class ProductListComponent implements OnInit {
-  products: Product[] = [];  
+  products: Product[] = [];
   selectedProduct: Product | undefined;
 
   constructor(private productService: ProductsService) {}
-  
+
   onAdded() {
     alert(`${this.selectedProduct?.title} added to the cart!`);
   }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    this.getProducts();
+  }
+  private getProducts() {
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products;
+    });
   }
 }
