@@ -6,7 +6,7 @@ import { Product } from '../product';
   selector: 'app-product-detail',
   imports: [CommonModule],
   templateUrl: './product-detail.component.html',
-  styleUrl: './product-detail.component.css'
+  styleUrl: './product-detail.component.css',
 })
 export class ProductDetailComponent {
   product = input<Product>();
